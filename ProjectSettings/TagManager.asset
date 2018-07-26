@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Ground
+    uniqueID: 1905390581
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Tanks
+    uniqueID: 2335784091
+    locked: 0
+  - name: Pickups
+    uniqueID: 3792573637
+    locked: 0
+  - name: Environment
+    uniqueID: 385040951
+    locked: 0
