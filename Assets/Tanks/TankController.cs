@@ -5,21 +5,39 @@ using UnityEngine.UI;
 
 public class TankController : MonoBehaviour {
 	[SerializeField] string characterName = "default";
-	[SerializeField] Text characterNameText;
+	[SerializeField] int playerNumber = 1;
 
 	[SerializeField] float speed = 500f;
 	[SerializeField] float rotationSpeed = 10f;
 	
 	Rigidbody2D rb;
-	public bool isFrozen = false;
+	StatusEffects status;
+
+	private static bool created = false;
+
+	public string TankName { 
+		get { return characterName;}
+		set { characterName = value;}
+	}
+
+	public int PlayerNumber {
+		get { return playerNumber; }
+		set { playerNumber = value; }
+	}
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
 	void Start(){
 		rb = GetComponent<Rigidbody2D>();
-		characterNameText.text = characterName;
+		status = GetComponent<StatusEffects>();
+		GetComponent<TankUI>().TankName.text = characterName;
 	}
 
 	public void Move(float move){
-		if (!isFrozen){
+		if (!status.isFrozen){
 			rb.velocity = transform.up * move * speed * Time.deltaTime;
 		}
 		
@@ -27,17 +45,6 @@ public class TankController : MonoBehaviour {
 
 	public void Rotate(float rotation){
 		rb.MoveRotation(rb.rotation - rotation * rotationSpeed * Time.deltaTime);
-	}
-
-	//TODO AI is not freezing
-	public void Freeze(float freezeTime){
-		StartCoroutine(FreezeForATime(freezeTime));
-	}
-
-	public IEnumerator FreezeForATime(float freezeTime){
-		isFrozen = true;
-		yield return new WaitForSeconds(freezeTime);
-		isFrozen = false;
 	}
 	
 }

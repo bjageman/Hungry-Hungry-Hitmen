@@ -5,14 +5,11 @@ using UnityEngine;
 public class IceBullet : Bullet {
 	[SerializeField] float freezeTime = 3f;
 
-	TankController tankController;
+	TankController tank;
 
 	protected override void SpecialAttack(Collider2D collider){
-		print("freeze " + collider.gameObject.name);
-		tankController = collider.GetComponent<TankController>();
-		tankController.Freeze(freezeTime);
+		tank = collider.GetComponent<TankController>();
+		tank.GetComponent<StatusEffects>().Freeze(freezeTime);
 	}
-
-	//TODO Gets destroyed before it can finish
 	
 }

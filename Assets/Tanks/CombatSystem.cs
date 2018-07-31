@@ -31,7 +31,7 @@ public class CombatSystem : MonoBehaviour {
 				Bullet bullet = bullets[0];
 				bullets.RemoveAt(0);
 				SpawnBullet(bullet);
-				RemoveBulletFromUI(bullet);
+				GetComponent<TankUI>().RemoveBulletFromUI(bullet);
 			}
         }
     }
@@ -46,7 +46,7 @@ public class CombatSystem : MonoBehaviour {
     public bool LoadBullet(Bullet bullet){
 		if (bullet == null || bullets.Count >= maxBullets){ return false; }
 		bullets.Add(bullet);
-		AddBulletToUI(bullet);
+		GetComponent<TankUI>().AddBulletToUI(bullet);
 		if (CheckForBulletCombo())
         {
             CreateSuperBullet();
@@ -73,19 +73,5 @@ public class CombatSystem : MonoBehaviour {
 			previousBullet = currentBullet;
 		}
 		return false;
-    }
-
-    private void AddBulletToUI(Bullet bullet)
-    {
-        GameObject bulletUIObject = new GameObject();
-        Image bulletImage = bulletUIObject.AddComponent<Image>(); 
-        bulletImage.sprite = bullet.GetComponent<SpriteRenderer>().sprite;
-		bulletImage.transform.SetParent(bulletUI.transform);
-    }
-
-	private void RemoveBulletFromUI(Bullet bullet)
-    {
-        Image[] bulletImages = bulletUI.GetComponentsInChildren<Image>();
-		Destroy(bulletImages[bulletImages.Length - 1].gameObject);
     }
 }

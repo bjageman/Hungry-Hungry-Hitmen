@@ -66,7 +66,7 @@ public class AIController : MonoBehaviour {
 		currentTarget = closestTarget;
     }
 
-	//AI will spin wildly before locking on player
+	//TODO: FIX: AI will spin wildly before locking on player
     private void LookAtTarget()
     {
         float angle = Vector3.Angle(transform.up, transform.position - currentTarget.transform.position);
