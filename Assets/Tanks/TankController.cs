@@ -38,13 +38,15 @@ public class TankController : MonoBehaviour {
 
 	public void Move(float move){
 		if (!status.isFrozen){
-			rb.velocity = transform.up * move * speed * Time.deltaTime;
+			rb.velocity = transform.up * move * speed * Time.fixedDeltaTime;
+		}else{
+			rb.velocity = Vector3.zero;
 		}
 		
 	}
 
 	public void Rotate(float rotation){
-		rb.MoveRotation(rb.rotation - rotation * rotationSpeed * Time.deltaTime);
+		rb.MoveRotation(rb.rotation - rotation * rotationSpeed * Time.fixedDeltaTime);
 	}
 	
 }

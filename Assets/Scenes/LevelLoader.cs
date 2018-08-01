@@ -15,9 +15,11 @@ public class LevelLoader : MonoBehaviour {
     private void LoadTanksOnSpawnPoints()
     {
 		TankController[] tanks = FindObjectsOfType<TankController>();
+		MultipleTargetFollow cameraFollow = Camera.main.GetComponent<MultipleTargetFollow>();
 		if (spawnPoints.Length >= tanks.Length){
 			foreach (TankController tank in tanks){
 					tank.transform.position = spawnPoints[tank.PlayerNumber - 1].transform.position;
+					cameraFollow.AddTarget(tank.transform);
 			}
 		}
     }

@@ -437,7 +437,6 @@ GameObject:
   - component: {fileID: 224407575551511972}
   - component: {fileID: 222820114707983312}
   - component: {fileID: 114168514928601022}
-  - component: {fileID: 114593171146298390}
   m_Layer: 5
   m_Name: Player Select
   m_TagString: Untagged
@@ -487,7 +486,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224659361840464116}
-  - component: {fileID: 114454142940373178}
   m_Layer: 5
   m_Name: Editor
   m_TagString: Untagged
@@ -589,6 +587,8 @@ GameObject:
   - component: {fileID: 224957919045259778}
   - component: {fileID: 222734548151991726}
   - component: {fileID: 114007896493086346}
+  - component: {fileID: 114859997156964104}
+  - component: {fileID: 114981749289359120}
   m_Layer: 5
   m_Name: Player 1
   m_TagString: Untagged
@@ -673,6 +673,8 @@ GameObject:
   - component: {fileID: 224341734358701898}
   - component: {fileID: 222499796234802916}
   - component: {fileID: 114703619379433988}
+  - component: {fileID: 114046457404243860}
+  - component: {fileID: 114960593024848790}
   m_Layer: 5
   m_Name: Player 3
   m_TagString: Untagged
@@ -892,6 +894,8 @@ GameObject:
   - component: {fileID: 224571439233247054}
   - component: {fileID: 222642579244003318}
   - component: {fileID: 114429934054838460}
+  - component: {fileID: 114443914351815330}
+  - component: {fileID: 114931874430571964}
   m_Layer: 5
   m_Name: Player 2
   m_TagString: Untagged
@@ -1012,6 +1016,8 @@ GameObject:
   - component: {fileID: 224848119097624522}
   - component: {fileID: 222281134185919422}
   - component: {fileID: 114582912048276770}
+  - component: {fileID: 114337445069537768}
+  - component: {fileID: 114980977670686746}
   m_Layer: 5
   m_Name: Player 4
   m_TagString: Untagged
@@ -1142,9 +1148,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114980977670686746}
         m_MethodName: AddPlayer
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1209,6 +1215,26 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114046457404243860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512454570418820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69422972a142ae4e974c32f833096ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankIndex: 3
+  tankName: {fileID: 114318543551912118}
+  tankImage: {fileID: 114441022095342876}
+  tankSprites:
+  - {fileID: 21300000, guid: fa161578a4401f9449ac9598327973d5, type: 3}
+  - {fileID: 21300000, guid: 9dbda514629a28941bf393df000c8501, type: 3}
+  - {fileID: 21300000, guid: 6bbfcad2325c9e749aef84003f0935f8, type: 3}
+  - {fileID: 21300000, guid: b8be0f4144bb3b84b848d8586bca8e94, type: 3}
+  - {fileID: 21300000, guid: 9d630f9f04376364a8abd42f4298521a, type: 3}
 --- !u!114 &114056348834103222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1270,20 +1296,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
-        m_MethodName: AddPlayer
-        m_Mode: 3
+      - m_Target: {fileID: 1761882361064396}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1761882361064396}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 114981749289359120}
+        m_MethodName: AddPlayer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1390,9 +1416,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114960593024848790}
         m_MethodName: RemovePlayer
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1909,9 +1935,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114960593024848790}
         m_MethodName: AddBot
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1984,6 +2010,26 @@ MonoBehaviour:
   m_Text: 'Player 3
 
 '
+--- !u!114 &114337445069537768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958907654409062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69422972a142ae4e974c32f833096ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankIndex: 4
+  tankName: {fileID: 114710871962873734}
+  tankImage: {fileID: 114239044873541686}
+  tankSprites:
+  - {fileID: 21300000, guid: fa161578a4401f9449ac9598327973d5, type: 3}
+  - {fileID: 21300000, guid: 9dbda514629a28941bf393df000c8501, type: 3}
+  - {fileID: 21300000, guid: 6bbfcad2325c9e749aef84003f0935f8, type: 3}
+  - {fileID: 21300000, guid: b8be0f4144bb3b84b848d8586bca8e94, type: 3}
+  - {fileID: 21300000, guid: 9d630f9f04376364a8abd42f4298521a, type: 3}
 --- !u!114 &114346671323906696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2045,9 +2091,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114980977670686746}
         m_MethodName: RemovePlayer
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2119,20 +2165,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
-        m_MethodName: AddPlayer
-        m_Mode: 3
+      - m_Target: {fileID: 1512454570418820}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1512454570418820}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 114931874430571964}
+        m_MethodName: AddPlayer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2350,18 +2396,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114454142940373178
+--- !u!114 &114443914351815330
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1398205045055134}
+  m_GameObject: {fileID: 1761882361064396}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b69422972a142ae4e974c32f833096ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankImage: {fileID: 114974333207139578}
+  tankIndex: 2
+  tankName: {fileID: 114056912637844376}
+  tankImage: {fileID: 114215117359339980}
   tankSprites:
   - {fileID: 21300000, guid: fa161578a4401f9449ac9598327973d5, type: 3}
   - {fileID: 21300000, guid: 9dbda514629a28941bf393df000c8501, type: 3}
@@ -2429,9 +2477,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114981749289359120}
         m_MethodName: RemovePlayer
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2480,7 +2528,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114958652272080932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114443914351815330}
+        m_MethodName: NextTankColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114544942412099370
@@ -2605,18 +2664,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114593171146298390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1346812188691648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cdf1beb9d4449d40a94d18e03b30450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tankPrefab: {fileID: 1667092797428204, guid: babcfe3a8b8c9464e99e49b133640846, type: 2}
 --- !u!114 &114598584618578668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2765,9 +2812,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114931874430571964}
         m_MethodName: RemovePlayer
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2857,7 +2904,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114544942412099370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114337445069537768}
+        m_MethodName: NextTankColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114676070672036028
@@ -3231,9 +3289,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114454142940373178}
+      - m_Target: {fileID: 114859997156964104}
         m_MethodName: NextTankColor
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3338,20 +3396,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
-        m_MethodName: AddPlayer
-        m_Mode: 3
+      - m_Target: {fileID: 1958907654409062}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1958907654409062}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 114960593024848790}
+        m_MethodName: AddPlayer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3435,7 +3493,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114969910998856142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114046457404243860}
+        m_MethodName: NextTankColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114852164990971588
@@ -3471,6 +3540,26 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '>'
+--- !u!114 &114859997156964104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1434736882903232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69422972a142ae4e974c32f833096ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankIndex: 1
+  tankName: {fileID: 114845066141621632}
+  tankImage: {fileID: 114974333207139578}
+  tankSprites:
+  - {fileID: 21300000, guid: fa161578a4401f9449ac9598327973d5, type: 3}
+  - {fileID: 21300000, guid: 9dbda514629a28941bf393df000c8501, type: 3}
+  - {fileID: 21300000, guid: 6bbfcad2325c9e749aef84003f0935f8, type: 3}
+  - {fileID: 21300000, guid: b8be0f4144bb3b84b848d8586bca8e94, type: 3}
+  - {fileID: 21300000, guid: 9d630f9f04376364a8abd42f4298521a, type: 3}
 --- !u!114 &114861712106835826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3532,9 +3621,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114980977670686746}
         m_MethodName: AddBot
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3743,9 +3832,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114981749289359120}
         m_MethodName: AddBot
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3828,9 +3917,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114593171146298390}
+      - m_Target: {fileID: 114931874430571964}
         m_MethodName: AddBot
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3841,6 +3930,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114931874430571964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761882361064396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdf1beb9d4449d40a94d18e03b30450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankPrefab: {fileID: 1667092797428204, guid: babcfe3a8b8c9464e99e49b133640846, type: 2}
+  tankIndex: 2
 --- !u!114 &114949580035959556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3901,6 +4003,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114960593024848790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512454570418820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdf1beb9d4449d40a94d18e03b30450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankPrefab: {fileID: 1667092797428204, guid: babcfe3a8b8c9464e99e49b133640846, type: 2}
+  tankIndex: 3
 --- !u!114 &114969910998856142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3955,6 +4070,32 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114980977670686746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958907654409062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdf1beb9d4449d40a94d18e03b30450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankPrefab: {fileID: 1667092797428204, guid: babcfe3a8b8c9464e99e49b133640846, type: 2}
+  tankIndex: 4
+--- !u!114 &114981749289359120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1434736882903232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdf1beb9d4449d40a94d18e03b30450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankPrefab: {fileID: 1667092797428204, guid: babcfe3a8b8c9464e99e49b133640846, type: 2}
+  tankIndex: 1
 --- !u!114 &114987343412644542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4357,8 +4498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0009613037, y: -0.00012875}
-  m_SizeDelta: {x: 380.01, y: 177.33}
+  m_AnchoredPosition: {x: 0.0009784698, y: 0.012501}
+  m_SizeDelta: {x: 400, y: 164.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224062785107894874
 RectTransform:
@@ -4456,8 +4597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0009613037, y: -0.00012875}
-  m_SizeDelta: {x: 380.01, y: 177.33}
+  m_AnchoredPosition: {x: -0.0002532, y: -0.012501}
+  m_SizeDelta: {x: 400, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224156229408779362
 RectTransform:
@@ -4736,7 +4877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200, y: 83}
+  m_AnchoredPosition: {x: 200, y: 108.78}
   m_SizeDelta: {x: 400, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224365579576935192
@@ -5024,8 +5165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0009613037, y: -0.00012875}
-  m_SizeDelta: {x: 380.01, y: 177.33}
+  m_AnchoredPosition: {x: -0.0002656, y: 0.008699894}
+  m_SizeDelta: {x: 400, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224590820987184590
 RectTransform:
@@ -5082,8 +5223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0009613037, y: -0.00012875}
-  m_SizeDelta: {x: 380.01, y: 177.33}
+  m_AnchoredPosition: {x: 0.0009784698, y: 0}
+  m_SizeDelta: {x: 400, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224728587413864908
 RectTransform:
@@ -5139,7 +5280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -200, y: 83}
+  m_AnchoredPosition: {x: -200, y: 109.28}
   m_SizeDelta: {x: 400, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224851276809381242
